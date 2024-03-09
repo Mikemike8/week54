@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+
+  <!-- Header-->
+  <header class="header">
+    <img src="./assets/logo/logo.png" alt="" class="logo">
+    <ul class="main-nav-list">
+      <li><a href="#" class="main-nav-link">Home</a></li>
+      <li><a href="./portfilio/spider.html" class="main-nav-link">Work</a></li>
+      <li><a href="blog.html" class="main-nav-link"> MY BLOG</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <img src="./assets/hero/webdev.png" alt="" class="hero-img">
+    <img src="./assets/hero/bg.jpg" alt="" class="bg">
+    <div class="hero-description">
+      <h1 class="hero-title"> Hi, I'm <span class="dand">Michael</span>! </h1>
+      <p class="hero-subheading">A Software Enginneer!</p>
+    </div>
+    <div class="hero-model">
+      <model-viewer src="./models/desk.glb" camera-controls disable-pan disable-zoom interaction-prompt="none"
+        min-camera-orbit="auto 55deg auto" min-camera-orbit="auto 92deg auto" field-of-view="35.3deg"></model-viewer>
+    </div>
+  </section>
+
+  <section class="about-me">
+    <div class="about-me-description">
+      <p class="introduction">INTRODUCTION</p>
+      <h1 class="about-me-title">Hello World!</h1>
+      <p class="about-me-subheading">I started my coding journey a few years ago and now I'm working full time and
+        doing freelance projects. I'm obsessed with unique and interoesting design and user-friendly functionality, so hit
+        me up with your artistic project ideas or app proposals.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="./assets/skills/react.png" alt="" class="reactImg" />
+        <p class="title">React Js</p>
+      </div>
+
+      <div class="card">
+        <img src="./assets/skills/R3F.png" alt="" class="r3f" />
+        <p class="title">React 3 Fiber</p>
+      </div>
+
+      <div class="card">
+        <img src="./assets/skills/ThreeJs.png" alt="" class="ThreeJsImg" />
+        <p class="title">Three Js</p>
+      </div>
+
+      <div class="card">
+        <img src="./assets/skills/js.png" alt="" class="js" />
+        <p class="title">Javascript</p>
+      </div>
+
+      <div class="card">
+        <img src="./assets/skills/htmlcss.png" alt="" class="htmlImg" />
+        <p class="title">Html & Css </p>
+      </div>
+    </div>
+
+  </section>
+  <section class="time-line-section">
+    <div class="time-line-content">
+        <div class="heading-description">
+            <p class="time-line-title">WHAT I HAVE DONE</p>
+            <h1 class="time-line-subheading"> Work Experience !</h1>
+        </div>
+        <div class="timeline">
+            <div class="line"></div>
+            <div class="time-line-description">
+                <div class="mine-circle"></div>
+                <div class="content">
+                    <h2 class="content-timeline-title">Web Design</h2>
+                    <p class="content-timeline-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur necessitatibus facere fugiat voluptatibus corrupti eveniet laborum, velit, officia minus tempora nesciunt optio dolorem? Fugit libero saepe consequuntur quod molestias.</p>
+                </div>
+            </div>
+            <div class="time-line-description">
+                <div class="mine-circle"></div>
+                <div class="content">
+                    <h2 class="content-timeline-title"> Html & Css</h2>
+                    <p class="content-timeline-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur necessitatibus facere fugiat voluptatibus corrupti eveniet laborum, velit, officia minus tempora nesciunt optio dolorem? Fugit libero saepe consequuntur quod molestias.</p>
+                </div>
+            </div>
+            <div class="time-line-description">
+                <div class="mine-circle"></div>
+                <div class="content">
+                    <h2 class="content-timeline-title">Javascript</h2>
+                    <p class="content-timeline-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur necessitatibus facere fugiat voluptatibus corrupti eveniet laborum, velit, officia minus tempora nesciunt optio dolorem? Fugit libero saepe consequuntur quod molestias.</p>
+                </div>
+            </div>
+            <div class="time-line-description">
+                <div class="mine-circle"></div>
+                <div class="content">
+                    <h2 class="content-timeline-title">React 3 Fiber</h2>
+                    <p class="content-timeline-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur necessitatibus facere fugiat voluptatibus corrupti eveniet laborum, velit, officia minus tempora nesciunt optio dolorem? Fugit libero saepe consequuntur quod molestias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="youtube">
+    <h1 class="youtube-title">Youtube Video !</h1>
+    <p class="youtube-description"> Take a look to my Youtube Channel
+        for more videos with Three JS, React Three Fiber,Responsive Portfilio, Animated Background and more....
+    </p>
+    <div class="videos">
+        <div class="youtube-videos">
+            <img src="./assets/links/groot-img.png" class="images" alt="">
+            <h2 class="videos-title"> Groot Website !</h2>
+            <p class="video-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus quae, error praesentium vero officiis minima. Hic quisquam corrupti, vitae explicabo, cupiditate, iure perspiciatis quidem sit rerum minima expedita a laudantium?
+
+            </p>
+            <a href="./crewvideo/index2.html" 
+           target="_blank" class="btn"> See Videos</a>
+
+        </div>
+        <div class="youtube-videos">
+            <img src="./assets/links/AnimatedBackground.png" class="images" alt="">
+            <h2 class="videos-title"> Three Js !</h2>
+            <p class="video-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus quae, error praesentium vero officiis minima. Hic quisquam corrupti, vitae explicabo, cupiditate, iure perspiciatis quidem sit rerum minima expedita a laudantium?
+
+            </p>
+            <a href="https://www.youtube.com/watch?v=hiXKWliEPY4" 
+           target="_blank" class="btn"> See Videos</a>
+
+        </div>
+        <div class="youtube-videos">
+            <img src="./assets/links/htmlport.png" class="images" alt="">
+            <h2 class="videos-title"> Three Js !</h2>
+            <p class="video-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus quae, error praesentium vero officiis minima. Hic quisquam corrupti, vitae explicabo, cupiditate, iure perspiciatis quidem sit rerum minima expedita a laudantium?
+
+            </p>
+            <a href="#" 
+           target="_blank" class="btn"> See Videos</a>
+
+        </div>
+    </div>
+
+  </section>
+  <!-- Final -->
+  <section class="final">
+    <div class="form-box">
+        <h1 class="form-title">Contact</h1>
+        <div class="form-bg">
+            <form id="form">
+                <div class="form-content">
+                    <div class="email-box">
+                        <label for="email" class="email-title">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail destination, ex: wd.https@gmail.com" class="email-input"/>
+                    </div>
+                    <div class="subject-box">
+                        <label for="subject" class="subject-title">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject E-mail" class="subject-input"/>
+                    </div> 
+                    <div class="message-box">
+                        <label for="message" class="message-title">Subject:</label>
+                        <textarea type="text" id="message" name="message" placeholder="E-mail Message" class="message-input"></textarea>
+                    </div> 
+                    <div id="buttons">
+                        <button type="submit" class="send-button" disabled>Send</button>
+                        <button class="reset-button" type="reset">Reset</button>
+                    </div>     
+                    
+                </div>
+            </form>
+            <div id="spinner" class="hideSpinner messageSent">
+              <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <model-viewer class="robo" src="./models/robot_playground/scene.gltf"
+    camera-controls
+    disable-pan
+    disable-zoom
+    interaction-prompt="none"
+    field-of-view="10deg"
+    autoplay="experiment_Object_159"
+    ></model-viewer>
+  </section>
+  
+
+</body>
+
+</html>

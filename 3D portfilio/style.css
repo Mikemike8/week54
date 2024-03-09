@@ -5,6 +5,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+.time-line-description {
+    display: flex;
+    transform: translateX(-50%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: 1.2vh 0;
+    padding: 1vw;
+    align-items: center;
+    width: 45vw;
+    min-height: 35vh;
+    opacity: 0; /* Initially hide the paragraphs */
+}
+
+.time-line-description:nth-child(odd) {
+    flex-direction: row-reverse;
+    transform: translateX(50%);
+}
+
+.show-me {
+    transform: none;
+    opacity: 1; /* Reveal the paragraphs when in viewport */
+}
 
 body{
     background-color:#010115 ;
@@ -300,6 +323,7 @@ body{
     top: -7vh;
     background-color: #fff;
     box-shadow: 0 0 30px #fff;
+    opacity: 0;
 }
 
 .line:before,
@@ -405,6 +429,7 @@ body{
     place-items: center;
     text-align: center;
 }
+
 
 .images{
     width: 25vw;

@@ -78,11 +78,39 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Individual slides */
+        .slide {
+            display: none;
+        }
+
+        /* Style for the button */
+        .slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px; /* Adjust as needed */
+            background-color: red; /* Change button color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         iframe {
             display: block;
+            height: 30vw;
+            width: 60%;
             margin: 0 auto;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Adding shadow glow */
+            border-radius: 10px; /* Adding border radius */
         }
     </style>
 </head>
@@ -97,7 +125,20 @@
         <a href="#">Blog</a>
     </nav>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cwBxMU_YtaY?si=To8ewZejfQln6SED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="slider">
+       
+        <div class="slide">
+            <iframe src="https://www.youtube.com/embed/cwBxMU_YtaY?si=To8ewZejfQln6SED" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="slide">
+            <iframe src="https://www.youtube.com/embed/HEH3qLofMaU?si=TO7JyHRdaR8t_RQv" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="slide">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fp9LMsI6uJ8?si=FMmsnXexi67MCuTm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+        
+        <button id="nextBtn" onclick="nextSlide()">Next</button>
+    </div>
+
     <div class="container">
         <div class="post">
             <h2>Title: "The Evolution of Frontend Frameworks: A Journey Through Time"</h2>
@@ -134,8 +175,54 @@
         </div>
     </div>
     <footer>
-        &copy; 2024 My Cinematic Blog. All rights reserved.
+        &copy; by Michael j. Harris  2024 My Cinematic Blog. All rights reserved.
     </footer>
+    <script>
+        let slideIndex = 0;
+        let videoPlaying = false; // Variable to track if video is playing
+    
+        showSlides();
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            if (!videoPlaying) { // Only proceed if no video is playing
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 10000000); // Change slide every min 
+            }
+        }
+    
+        function nextSlide() {
+            let slides = document.getElementsByClassName("slide");
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    
+        // Add event listener to pause slide loop when video starts playing
+        document.querySelectorAll('iframe').forEach(item => {
+            item.addEventListener('playing', () => {
+                videoPlaying = true;
+            });
+        });
+    
+        // Add event listener to resume slide loop when video ends
+        document.querySelectorAll('iframe').forEach(item => {
+            item.addEventListener('ended', () => {
+                videoPlaying = false;
+                showSlides();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -1,3 +1,9 @@
+window.onload = function(){
+
+  prompt('welcome to my page what your name')
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
   // Get the timeline description elements, the timeline line, and the line streak
   const timelineDescriptions = document.querySelectorAll('.time-line-description');

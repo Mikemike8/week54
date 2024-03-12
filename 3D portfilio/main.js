@@ -1,4 +1,6 @@
-
+window.onload = function(){
+  prompt('what is your name')
+}
 
 
 
